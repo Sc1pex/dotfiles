@@ -1,0 +1,1 @@
+/var/home/scipex/sync/config.fish

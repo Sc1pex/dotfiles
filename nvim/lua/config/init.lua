@@ -1,0 +1,8 @@
+require('config.treesitter')
+require('config.lsp')
+require('config.cmp')
+require('config.telescope')
+require('config.session')
+require('config.cpp-runner')
+require('config.git')
+require('config.debug')

@@ -1,0 +1,25 @@
+{
+  "Problema fisier": {
+    "prefix": "pbfout",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "",
+      "using namespace std;",
+      "",
+      "ifstream fin(\"$1.in\");",
+      "ofstream fout(\"$1.out\");",
+      "",
+      "int main() {$0}"
+    ]
+  },
+  "Problema consola": {
+    "prefix": "pbcout",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "",
+      "using namespace std;",
+      "",
+      "int main() {$0}"
+    ]
+  }
+}
