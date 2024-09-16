@@ -10,3 +10,5 @@ tmux/plugins
 
 !fish/
 !fish/config.fish
+
+!starship.toml
