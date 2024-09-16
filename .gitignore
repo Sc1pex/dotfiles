@@ -9,4 +9,4 @@
 tmux/plugins
 
 !fish/
-!fish/**
+!fish/config.fish
