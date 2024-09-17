@@ -58,7 +58,6 @@ mason_lspconfig.setup_handlers {
     end,
 }
 
-
 require('mason-null-ls').setup {
     ensure_installed = {},
     automatic_installation = false,
@@ -68,43 +67,4 @@ require('null-ls').setup {
     sources = {},
 }
 
-local lspconfig = require 'lspconfig'
-
-lspconfig.ocamllsp.setup {
-    on_attach = on_attach,
-}
-lspconfig.hls.setup {
-    on_attach = on_attach,
-}
-lspconfig.sourcekit.setup {
-    on_attach = on_attach,
-}
-lspconfig.zls.setup {
-    on_attach = on_attach,
-    settings = {
-        zls = {
-            enable_autofix = false,
-            warn_style = true,
-            enable_build_on_save = true,
-        },
-    },
-}
-lspconfig.gleam.setup {
-    on_attach = on_attach,
-}
-
 vim.filetype.add { extension = { templ = 'templ' } }
-
-lspconfig.html.setup {
-    on_attach = function(client)
-        if vim.bo.filetype == 'templ' then
-            client.server_capabilities.documentFormattingProvider = false
-            client.server_capabilities.documentRangeFormattingProvider = false
-        end
-        on_attach()
-    end,
-    capabilities = capabilities,
-    filetypes = { 'html', 'templ' },
-}
-
-require("cmake-tools").setup({})
