@@ -1,3 +1,49 @@
+local cmp = require('cmp')
+local lspkind = require('lspkind')
+
+cmp.setup {
+    sources = {
+        {
+            name = 'lazydev',
+            group_index = 0,
+        },
+        { name = 'nvim_lsp' },
+        { name = 'path' },
+    },
+    mapping = cmp.mapping.preset.insert {
+        ['<C-n>'] = cmp.mapping.select_next_item(),
+        ['<C-p>'] = cmp.mapping.select_prev_item(),
+        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-Space>'] = cmp.mapping.complete {},
+        ['<CR>'] = cmp.mapping.confirm {
+            behavior = cmp.ConfirmBehavior.Replace,
+            select = true,
+        },
+        ['<Tab>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_next_item()
+                fallback()
+            end
+        end, { 'i', 's' }),
+        ['<S-Tab>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_prev_item()
+            else
+                fallback()
+            end
+        end, { 'i', 's' }),
+    },
+    formatting = {
+        format = lspkind.cmp_format({
+            mode = 'symbol',
+            maxwidth = 50,
+            ellipsis_char = '...',
+            show_labelDetails = true,
+        })
+    }
+}
+
 local on_attach = function()
     vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover)
@@ -11,10 +57,13 @@ local on_attach = function()
     vim.keymap.set('n', '<F2>', vim.lsp.buf.rename)
 end
 
+capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 require('mason-lspconfig').setup_handlers({
     function(server_name)
         require('lspconfig')[server_name].setup({
-            on_attach = on_attach
+            on_attach = on_attach,
+            capabilities = capabilites
         })
     end
 })

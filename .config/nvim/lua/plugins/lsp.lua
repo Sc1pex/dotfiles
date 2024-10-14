@@ -16,5 +16,12 @@ return {
         "folke/lazydev.nvim",
         ft = "lua",
         opts = {},
-    }
+    },
+    {
+        'j-hui/fidget.nvim',
+        opts = {}
+    },
+    { 'hrsh7th/cmp-nvim-lsp' },
+    { 'hrsh7th/nvim-cmp' },
+    { 'onsails/lspkind.nvim' }
 }
