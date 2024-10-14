@@ -29,10 +29,19 @@ return {
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.8',
-        dependencies = { 'nvim-lua/plenary.nvim' }
+        dependencies = { 'nvim-lua/plenary.nvim' },
     },
     {
         'nmac427/guess-indent.nvim',
+        opts = {},
+    },
+    {
+        'mbbill/undotree'
+    },
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim" },
         opts = {},
     }
 }
