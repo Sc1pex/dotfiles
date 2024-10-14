@@ -22,3 +22,9 @@ vim.keymap.set('n', '|', '<cmd>split<cr>')
 
 -- Neogit
 vim.keymap.set('n', '<leader>gg', '<cmd>Neogit<cr>')
+
+-- Session management
+vim.keymap.set('n', '<leader>ss', ':SessionManager save_current_session<cr>')
+vim.keymap.set('n', '<leader>sl', ':SessionManager load_session<cr>')
+vim.keymap.set('n', '<leader>sL', ':SessionManager load_last_session<cr>')
+vim.keymap.set('n', '<leader>sd', ':SessionManager delete_session<cr>')
