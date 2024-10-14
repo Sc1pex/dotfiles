@@ -15,6 +15,10 @@ vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
 -- General
 vim.keymap.set('n', '<leader>w', ':w<cr>')
 vim.keymap.set('n', '<leader>c', ':bd<cr>')
+vim.keymap.set('v', '<leader>y', '"+y')
 
 vim.keymap.set('n', '\\', '<cmd>vsplit<cr>')
 vim.keymap.set('n', '|', '<cmd>split<cr>')
+
+-- Neogit
+vim.keymap.set('n', '<leader>gg', '<cmd>Neogit<cr>')

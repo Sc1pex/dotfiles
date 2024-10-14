@@ -4,7 +4,7 @@ return {
     },
     {
         'williamboman/mason.nvim',
-        config = true
+        opts = {},
     },
     {
         'williamboman/mason-lspconfig.nvim',
@@ -15,6 +15,6 @@ return {
     {
         "folke/lazydev.nvim",
         ft = "lua",
-        config = true
+        opts = {},
     }
 }
