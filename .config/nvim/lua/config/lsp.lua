@@ -45,6 +45,9 @@ cmp.setup {
     }
 }
 
+local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
+cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
+
 local on_attach = function()
     vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover)
@@ -58,13 +61,20 @@ local on_attach = function()
     vim.keymap.set('n', '<F2>', vim.lsp.buf.rename)
 end
 
-capabilities = require('cmp_nvim_lsp').default_capabilities()
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require('mason-lspconfig').setup_handlers({
     function(server_name)
         require('lspconfig')[server_name].setup({
             on_attach = on_attach,
-            capabilities = capabilites
+            capabilities = capabilities
         })
     end
+})
+
+local lspconfig = require('lspconfig')
+
+lspconfig['gleam'].setup({
+    on_attach = on_attach,
+    capabilities = capabilities
 })

@@ -4,9 +4,4 @@ return {
         version = '*',
         opts = {},
     },
-    {
-        'echasnovski/mini.pairs',
-        version = '*',
-        opts = {},
-    }
 }

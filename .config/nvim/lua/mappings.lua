@@ -42,5 +42,10 @@ vim.keymap.set('n', '<leader>3', function() harpoon:list():select(3) end)
 vim.keymap.set('n', '<leader>4', function() harpoon:list():select(4) end)
 vim.keymap.set('n', '<leader>5', function() harpoon:list():select(5) end)
 vim.keymap.set('n', '<leader>6', function() harpoon:list():select(6) end)
-vim.keymap.set('n', 'L', function() harpoon:list():next() end)
-vim.keymap.set('n', 'H', function() harpoon:list():prev() end)
+vim.keymap.set('n', 'L', function() harpoon:list():next({ ui_nav_wrap = true }) end)
+vim.keymap.set('n', 'H', function() harpoon:list():prev({ ui_nav_wrap = true }) end)
+
+-- Diagnostic keymaps
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setqflist)
