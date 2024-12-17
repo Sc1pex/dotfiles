@@ -25,6 +25,7 @@ return {
 			},
 			filesystem = {
 				bind_to_cwd = true,
+				hijack_netrw_behavior = "disabled",
 			},
 		},
 	},
