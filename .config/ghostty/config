@@ -1,0 +1,4 @@
+command = /bin/fish
+theme = tokyonight
+font-family = GeistMono Nerd Font Mono
+font-size = 13

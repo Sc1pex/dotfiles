@@ -1,0 +1,11 @@
+# /var/home/scipex/.config/tmuxinator/zigos.yml
+
+name: zigos
+root: ~/dev/Projects/zigos/
+
+windows:
+  - nvim:
+      layout: main-vertical
+      panes:
+        - "nvim -c ':SessionManager load_current_dir_session'"
+  - run:

@@ -9,10 +9,11 @@ end
 alias vim="nvim"
 alias ls="eza -la"
 alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
-# Devcontainer aliases
-alias devcb="devcontainer build --workspace-folder ."
-alias devcu="devcontainer up --workspace-folder ."
-alias devce="devcontainer exec --workspace-folder ."
-alias de="devcontainer exec --workspace-folder ."
 
 set -gx EDITOR nvim
+
+function tses
+    set selected_sesh (sesh list -i -T | gum filter --limit 1 --placeholder 'Pick a sesh' --prompt='⚡')
+    sesh connect "$selected_sesh"
+end
+

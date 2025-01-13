@@ -15,6 +15,7 @@ vim.keymap.set("n", "<leader>fd", "<cmd>Telescope diagnostics<cr>")
 
 -- General
 vim.keymap.set("n", "<leader>w", ":w<cr>")
+vim.keymap.set("n", "<leader>W", ":noa w<cr>")
 vim.keymap.set("v", "<leader>y", '"+y')
 vim.keymap.set("n", "<leader>c", ":bd<cr>")
 

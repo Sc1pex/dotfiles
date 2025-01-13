@@ -1,0 +1,10 @@
+# /var/home/scipex/.config/tmuxinator/sessions.yml
+
+name: sessions
+root: ~/.dotfiles/.config/tmuxinator/
+
+windows:
+  - nvim:
+      layout: main-vertical
+      panes:
+        - "nvim -c ':SessionManager load_current_dir_session'"

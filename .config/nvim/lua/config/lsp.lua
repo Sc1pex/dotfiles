@@ -9,6 +9,7 @@ cmp.setup({
 		end,
 	},
 	sources = cmp.config.sources({
+		{ name = "copilot", group_index = 2 },
 		{ name = "nvim_lsp" },
 		{ name = "path" },
 	}, {
@@ -39,6 +40,7 @@ cmp.setup({
 			maxwidth = 50,
 			ellipsis_char = "...",
 			show_labelDetails = true,
+			symbol_map = { Copilot = "" },
 		}),
 	},
 })
@@ -72,7 +74,12 @@ require("mason-lspconfig").setup_handlers({
 
 local lspconfig = require("lspconfig")
 
-lspconfig["gleam"].setup({
+lspconfig.gleam.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+lspconfig.zls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
