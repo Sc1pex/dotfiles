@@ -12,3 +12,4 @@ windows:
       layout: even-horizontal
       panes:
         - cd runner
+        - cd impls/bin && ./run_local.sh

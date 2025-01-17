@@ -1,0 +1,10 @@
+# /var/home/scipex/.config/tmuxinator/spotify.yml.yml
+
+name: spotify
+root: ~
+
+windows:
+  - :
+      layout: main-vertical
+      panes:
+        - "spotify_player"
