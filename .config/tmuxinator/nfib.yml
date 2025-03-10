@@ -10,6 +10,6 @@ windows:
         - "nvim -c ':SessionManager load_current_dir_session'"
   - run:
       layout: even-horizontal
-      panes:
-        - cd runner
-        - cd impls/bin && ./run_local.sh
+      panes: 
+        - "distrobox enter elixir -- fish -c 'cd nfib_server && mix phx.server'"
+        - "distrobox enter elixir"

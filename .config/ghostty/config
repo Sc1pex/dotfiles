@@ -1,5 +1,6 @@
 command = /bin/fish
 theme = tokyonight
-font-family = "JetBrains Mono Medium"
+font-family = "GeistMono"
 font-size = 12
 font-feature = -liga
+font-variation = wght=500

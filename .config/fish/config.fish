@@ -17,12 +17,3 @@ function tses
     sesh connect "$selected_sesh"
 end
 
-function tospotify
-    if test -z $last_session
-        set -U last_session (tmux display-message -p '#S')
-        tmuxinator spotify
-    else
-        tmuxinator $last_session
-        set -U last_session ""
-    end
-end
