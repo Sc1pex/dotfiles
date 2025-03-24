@@ -1,0 +1,24 @@
+[[session]]
+name = "dotfiles"
+path = "~/.dotfiles"
+startup_command = "nvim -c ':SessionManager load_current_dir_session'"
+
+[[session]]
+name = "nvim"
+path = "~/.dotfiles/.config/nvim/"
+startup_command = "nvim -c ':SessionManager load_current_dir_session'"
+
+[[session]]
+name = "nfib"
+path = "~/dev/projects/nfib"
+startup_command = "~/.config/sesh/scripts/nfib.sh"
+
+[[session]]
+name = "circuitgen"
+path = "~/dev/projects/circuitgen"
+startup_command = "nvim -c ':SessionManager load_current_dir_session'"
+
+[[session]]
+name = "hr-app"
+path = "~/dev/projects/HR-App/"
+startup_command = "~/.config/sesh/scripts/hr-app.sh"
