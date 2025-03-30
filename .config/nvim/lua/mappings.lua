@@ -88,3 +88,5 @@ end)
 vim.keymap.set('n', '<F7>', function()
   require('dapui').toggle()
 end)
+
+vim.keymap.set('n', '<leader>gg', '<cmd>Neogit<cr>')

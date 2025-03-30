@@ -35,9 +35,17 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', 'gr', function()
       Snacks.picker.lsp_references()
     end)
-    -- vim.keymap.set("n", "<leader>ls", require("telescope.builtin").lsp_dynamic_workspace_symbols)
+    vim.keymap.set('n', '<leader>q', function()
+      Snacks.picker.diagnostics_buffer()
+    end)
+    vim.keymap.set('n', '<leader>Q', function()
+      Snacks.picker.diagnostics()
+    end)
 
     vim.keymap.set('n', '<F2>', ':IncRename ')
+    vim.keymap.set('n', '<F3>', function()
+      return ':IncRename ' .. vim.fn.expand '<cword>'
+    end, { expr = true })
 
     local function client_supports_method(client, method, bufnr)
       if vim.fn.has 'nvim-0.11' == 1 then
