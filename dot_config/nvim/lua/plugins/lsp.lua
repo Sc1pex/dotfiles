@@ -1,14 +1,4 @@
 local servers = {
-  lua_ls = {
-    settings = {
-      Lua = {
-        completion = {
-          callSnippet = 'Replace',
-        },
-        diagnostics = { disable = { 'missing-fields' } },
-      },
-    },
-  },
   tailwindcss = {
     settings = {
       tailwindCSS = {
@@ -17,14 +7,6 @@ local servers = {
           eelixir = 'html',
           elixir = 'html',
         },
-      },
-    },
-  },
-  matlab_ls = {
-    settings = {
-      MATLAB = {
-        installPath = '/home/scipex/matlab/',
-        telemetry = false,
       },
     },
   },
@@ -142,7 +124,6 @@ return {
   {
     'williamboman/mason-lspconfig.nvim',
     opts = {
-      ensure_installed = { 'lua_ls' },
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}
