@@ -1,9 +1,6 @@
 return {
   {
     'saghen/blink.cmp',
-    dependencies = {
-      'rafamadriz/friendly-snippets',
-    },
 
     version = '*',
     ---@module 'blink.cmp'
@@ -34,6 +31,4 @@ return {
     },
     opts_extend = { 'sources.default' },
   },
-
-  { 'onsails/lspkind.nvim' },
 }

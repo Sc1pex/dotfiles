@@ -134,31 +134,11 @@ return {
       },
     },
   },
-  {
-    'folke/lazydev.nvim',
-    ft = 'lua',
-    opts = {},
-  },
-
-  {
-    'folke/trouble.nvim',
-    opts = {},
-    cmd = 'Trouble',
-  },
 
   {
     'smjonas/inc-rename.nvim',
     config = function()
       require('inc_rename').setup()
     end,
-  },
-
-  {
-    'nvim-flutter/flutter-tools.nvim',
-    lazy = false,
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-    },
-    config = true,
   },
 }
