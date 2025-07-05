@@ -4,13 +4,7 @@ return {
     config = function()
       require('mini.ai').setup()
       require('mini.surround').setup()
-      require('mini.pairs').setup {
-        mappings = {
-          ["'"] = {
-            neigh_pattern = '[^%a\\"<&].',
-          },
-        },
-      }
+      require('mini.pairs').setup ()
 
       local statusline = require 'mini.statusline'
       statusline.setup { use_icons = true }
