@@ -106,6 +106,14 @@ return {
         capabilities = capabilities,
         settings = {
           ['rust-analyzer'] = {
+            inlayHints = {
+              closingBraceHints = {
+                enable = false
+              },
+              parameterHints = {
+                enable = false
+              }
+            },
             check = {
               allTargets = false,
             },
