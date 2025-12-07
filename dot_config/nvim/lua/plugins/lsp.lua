@@ -95,15 +95,8 @@ return {
           spacing = 2,
         },
       }
-
-      local capabilities = require('blink.cmp').get_lsp_capabilities()
-      local lspconfig = require 'lspconfig'
-
-      lspconfig.zls.setup {
-        capabilities = capabilities,
-      }
-      lspconfig.rust_analyzer.setup {
-        capabilities = capabilities,
+    
+      vim.lsp.config('rust_analyzer', {
         settings = {
           ['rust-analyzer'] = {
             inlayHints = {
@@ -122,7 +115,10 @@ return {
             },
           },
         },
-      }
+      })
+
+      vim.lsp.enable('zls')
+      vim.lsp.enable('rust_analyzer')
     end,
   },
   {
@@ -137,7 +133,7 @@ return {
           local server = servers[server_name] or {}
           local capabilities = require('blink.cmp').get_lsp_capabilities()
           server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-          require('lspconfig')[server_name].setup(server)
+          vim.lsp.config(server_name, server)
         end,
       },
     },

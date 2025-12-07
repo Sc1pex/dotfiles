@@ -1,0 +1,9 @@
+font-family = GeistMono Nerd Font Mono
+font-style = Medium
+font-style-bold = Bold
+font-style-italic = Medium Italic
+font-style-bold-italic = Bold Italic
+font-feature = -liga
+theme = tokyonight
+command = fish
+window-decoration = false

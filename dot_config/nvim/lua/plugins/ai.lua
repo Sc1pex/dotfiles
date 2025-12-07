@@ -20,15 +20,23 @@ return {
         },
       },
       adapters = {
-        copilot = function()
-          return require('codecompanion.adapters').extend('copilot', {
-            schema = {
-              model = {
-                default = 'claude-sonnet-4',
+        http = {
+          copilot = function()
+            return require('codecompanion.adapters').extend('copilot', {
+              schema = {
+                model = {
+                  default = 'claude-sonnet-4.5',
+                },
               },
-            },
-          })
-        end,
+            })
+          end,
+        }
+      },
+      tools = {
+        cmd = {
+          continue_on_error = true,
+          include_stderr = true,
+        },
       },
     },
   },
