@@ -14,4 +14,11 @@ require('lazy').setup {
   import = 'plugins',
 }
 
+vim.filetype.add({
+  extension = {
+    tpp = "cpp",
+    inc = "asm",
+  },
+})
+
 require 'mappings'

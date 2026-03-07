@@ -119,6 +119,7 @@ return {
 
       vim.lsp.enable('zls')
       vim.lsp.enable('rust_analyzer')
+      vim.lsp.enable('racket_langserver')
     end,
   },
   {

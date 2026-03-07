@@ -2,6 +2,10 @@ set fish_greeting
 
 alias vim="nvim"
 alias ls="eza -la"
+alias cmd="cmake --preset debug"
+alias cmr="cmake --preset release"
+alias cbd="cmake --build --preset debug"
+alias cbr="cmake --build --preset release"
 
 set -gx EDITOR nvim
 
@@ -14,7 +18,7 @@ complete scala-cli -a '(scala-cli complete fish-v1 (math 1 + (count (__fish_prin
 # <<< scala-cli completions <<<
 
 # java
-set -gx JAVA_HOME ~/.jdks/openjdk-25.0.1/
+set -gx JAVA_HOME ~/.jdks/corretto-23.0.2/
 set -gx PATH $JAVA_HOME/bin $PATH
 
 # ZVM
