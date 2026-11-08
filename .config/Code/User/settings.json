@@ -1,0 +1,198 @@
+{
+    "breadcrumbs.enabled": false,
+    "editor.fontFamily": "GeistMono NerdFont",
+    "editor.fontSize": 16,
+    "terminal.integrated.fontSize": 16,
+    "editor.minimap.enabled": false,
+    "editor.fontLigatures": false,
+    "editor.fontWeight": "500",
+    "terminal.integrated.fontWeight": "500",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "explorer.compactFolders": false,
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "workbench.iconTheme": "material-icon-theme",
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.tabSize": 2
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "task.problemMatchers.neverPrompt": {
+        "shell": true
+    },
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "git.autofetch": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmDragAndDrop": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "lldb.suppressUpdateNotifications": true,
+    "editor.inlineSuggest.enabled": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "leader",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.files.save"
+            ]
+        },
+        {
+            "before": [
+                "L"
+            ],
+            "commands": [
+                "workbench.action.nextEditorInGroup"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ]
+        },
+        {
+            "before": [
+                "H"
+            ],
+            "commands": [
+                "workbench.action.previousEditorInGroup"
+            ]
+        },
+        {
+            "before": [
+                "gd"
+            ],
+            "commands": [
+                "editor.action.goToDefinition"
+            ]
+        },
+        {
+            "before": [
+                "Y"
+            ],
+            "after": [
+                "y",
+                "$"
+            ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-s>": false,
+        "<C-x>": false,
+        "<C-b>": false,
+        "<C-w>": false,
+        "<C-c>": false,
+        "<C-a>": false,
+        "<C-v>": false,
+        "<C-p>": false,
+        "<C-z>": false
+    },
+    "errorLens.messageBackgroundMode": "none",
+    "editor.lineNumbers": "relative",
+    "editor.renderWhitespace": "none",
+    "git.confirmSync": false,
+    "extensions.ignoreRecommendations": true,
+    "cmake.configureOnOpen": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "workbench.colorCustomizations": {
+        "editorInlayHint.foreground": "#868686f0",
+        "editorInlayHint.background": "#18181800"
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false,
+        "rust": false,
+        "ocaml": false,
+        "cpp": false
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.inlayHints.enabled": "off",
+    "emmet.excludeLanguages": [
+        "markdown",
+        "typescriptreact"
+    ],
+    "rust-analyzer.lens.enable": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "tailwindCSS.includeLanguages": {
+        "rust": "html"
+    },
+    "ocaml.server.codelens": false,
+    "telemetry.telemetryLevel": "off",
+    "security.workspace.trust.enabled": false,
+    "git.openRepositoryInParentFolders": "never",
+    "v-analyzer.serverPath": "~/.config/v-analyzer/bin/v-analyzer",
+    "haskell.manageHLS": "GHCup",
+    "haskell.plugin.class.codeLensOn": false,
+    "haskell.plugin.importLens.codeActionsOn": false,
+    "haskell.plugin.importLens.codeLensOn": false,
+    "rust-analyzer.check.allTargets": false,
+    "cmake.showOptionsMovedNotification": false,
+    "AutoHotkey2.InterpreterPath": "C:\\Users\\Scipex\\AppData\\Local\\Programs\\AutoHotkey\\v2\\AutoHotkey64.exe",
+    "workbench.startupEditor": "none",
+    "unocss.languageIds": [
+        "rust"
+    ],
+    "kotlin.languageServer.enabled": false,
+    "kotlin.debugAdapter.enabled": false,
+    "editor.codeLens": false,
+    "editor.stickyScroll.enabled": false,
+    "window.commandCenter": false,
+    "window.menuBarVisibility": "toggle",
+    "workbench.layoutControl.enabled": false,
+    "latex-workshop.latex.build.forceRecipeUsage": false,
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "prisma.showPrismaDataPlatformNotification": false,
+    "mesonbuild.downloadLanguageServer": true,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "hexeditor.columnWidth": 27,
+    "hexeditor.showDecodedText": true,
+    "hexeditor.defaultEndianness": "little",
+    "hexeditor.inspectorType": "aside",
+    "workbench.colorTheme": "Dark Modern",
+    "debug.console.fontSize": 16,
+    "terminal.integrated.commandsToSkipShell": [
+        "matlab.interrupt"
+    ],
+    "github.copilot.selectedCompletionModel": "",
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "zig.buildOnSaveProvider": "zls",
+    "zig.zls.enabled": "off",
+    "svelte.enable-ts-plugin": true,
+    "[svelte]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "chat.titleBar.signIn.enabled": false,
+    "chat.viewSessions.orientation": "stacked"
+}
