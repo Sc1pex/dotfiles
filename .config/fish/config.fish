@@ -16,6 +16,11 @@ starship init fish | source
 
 set -gx VCPKG_ROOT ~/dev/gitClones/vcpkg
 
+# homebrew libraries for compilers and linkers
+set -gx CPATH /home/linuxbrew/.linuxbrew/include
+set -gx LIBRARY_PATH /home/linuxbrew/.linuxbrew/lib
+set -gx LDFLAGS -Wl,-rpath,/home/linuxbrew/.linuxbrew/lib
+
 # >>> scala-cli completions >>>
 complete scala-cli -a '(scala-cli complete fish-v1 (math 1 + (count (__fish_print_cmd_args))) (__fish_print_cmd_args))'
 # <<< scala-cli completions <<<
