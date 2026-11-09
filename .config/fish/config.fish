@@ -20,6 +20,7 @@ set -gx VCPKG_ROOT ~/dev/gitClones/vcpkg
 set -gx CPATH /home/linuxbrew/.linuxbrew/include
 set -gx LIBRARY_PATH /home/linuxbrew/.linuxbrew/lib
 set -gx LDFLAGS -Wl,-rpath,/home/linuxbrew/.linuxbrew/lib
+set -gx PKG_CONFIG_PATH /home/linuxbrew/.linuxbrew/lib/pkgconfig /home/linuxbrew/.linuxbrew/share/pkgconfig
 
 # >>> scala-cli completions >>>
 complete scala-cli -a '(scala-cli complete fish-v1 (math 1 + (count (__fish_print_cmd_args))) (__fish_print_cmd_args))'
