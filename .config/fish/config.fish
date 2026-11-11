@@ -12,6 +12,9 @@ alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 set -gx EDITOR nvim
 
+# fish 4.3+ default theme leaves commands uncolored; keep the old blue
+set -g fish_color_command blue
+
 starship init fish | source
 
 set -gx VCPKG_ROOT ~/dev/gitClones/vcpkg
