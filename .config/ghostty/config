@@ -8,3 +8,5 @@ theme = TokyoNight
 command = fish
 window-decoration = false
 copy-on-select = false
+working-directory = home
+window-inherit-working-directory = false
